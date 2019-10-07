@@ -1,18 +1,18 @@
-# ख़िंलेर्मोर्ना - xinlermorna
-Devanagari Orthography for Lojban based on Hindi pronunciation
+# ربلرمرن - rablermorna
+Arabic Orthography for Lojban based on Hindi pronunciation
 
 ## Specification
 
 - Webpage:
 
-    https://vitovan.com/xinlermorna.html
+    https://vitovan.com/rablermorna.html
     
 - PDF:
 
-    https://vitovan.com/xinlermorna/xinlermorna-V0.5.pdf
+    https://vitovan.com/rablermorna/rablermorna-V0.1.pdf
 
 ## Transliteration
 
 - Online
 
-    http://vitovan.com/xinlermorna-transliteration
+    http://vitovan.com/rablermorna-transliteration
