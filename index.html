@@ -54,7 +54,7 @@
              padding: .3em;
          }
      }
-     button.x2l {
+     button.r2l {
          background-color: blue;
          color: white;
      }
@@ -129,7 +129,7 @@
      const v_x = ['اَ', 'اً', 'اِ', 'اٍ', 'اُ', 'اٌ'];
      const v_x_d = ['َ', 'ً', 'ِ', 'ٍ', 'ُ', 'ٌ'];
 
-     window.direction = 'l2x';
+     window.direction = 'l2r';
      const txt_input = document.getElementById('txt_input');
      const txt_output = document.getElementById('txt_output');
      const vocal_btn = document.getElementById('vocalised');
@@ -142,9 +142,9 @@
        const left = document.getElementById('left');
        const right = document.getElementById('right');
        if (current_mode) window.direction = current_mode;
-       if (window.direction === 'l2x') {
-         window.direction = 'x2l';
-         btn.className = 'x2l';
+       if (window.direction === 'l2r') {
+         window.direction = 'r2l';
+         btn.className = 'r2l';
          left.innerHTML = 'ربلرمرن ';
          right.innerHTML = 'Latin';
          txt_input.placeholder = 'مِ پرم ضٍ إ ضٍاِ لً ضرب بً مِ ';
@@ -158,7 +158,7 @@
            v_d_p[v_x_d[i]] = v_l[i];
          }
        } else {
-         window.direction = 'l2x';
+         window.direction = 'l2r';
          btn.className = '';
          left.innerHTML = 'Latin';
          right.innerHTML = 'ربلرمرن ';
@@ -176,7 +176,7 @@
        txt_input.focus();
      };
 
-     const fn_l2x = () => {
+     const fn_l2r = () => {
        const raw = txt_input.value
                             .replace(/h/g,'\'')
                             .replace(/[\.| ]+i /g,' إ ')
@@ -239,7 +239,7 @@
        txt_output.innerHTML = result;
      };
 
-     const fn_x2l = () => {
+     const fn_r2l = () => {
        const raw = txt_input.value
                             .replace(/إ/g,'.i')
                             .replace(/ئ/g,'ni\'o')
@@ -277,8 +277,8 @@
      };
 
      const t = () => {
-       if (window.direction === 'l2x') fn_l2x();
-       if (window.direction === 'x2l') fn_x2l();
+       if (window.direction === 'l2r') fn_l2r();
+       if (window.direction === 'r2l') fn_r2l();
      }
 
      txt_input.onkeyup = () => t();
@@ -287,7 +287,7 @@
        window.vocalised = document.getElementById('vocalised').checked;
        t();
      };
-     swap('x2l');
+     swap('r2l');
      toggleVocal();
     </script>
   </body>
