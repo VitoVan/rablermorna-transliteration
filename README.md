@@ -1,5 +1,5 @@
 # ربلرمرن - rablermorna
-Arabic Orthography for Lojban based on Hindi pronunciation
+Arabic Orthography for Lojban based on Arabic alphabet
 
 ## Specification
 
