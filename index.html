@@ -126,7 +126,8 @@
 
      // vowels
      const v_l = ['a', 'e', 'i', 'o', 'u', 'y'];
-     const v_x = ['اَ', 'اً', 'اِ', 'اٍ', 'اُ', 'اٌ'];
+     // const v_x = ['اَ', 'اً', 'اِ', 'اٍ', 'اُ', 'اٌ'];
+     const v_x = ['عَ', 'عً', 'عِ', 'عٍ', 'عُ', 'عٌ'];
      const v_x_d = ['َ', 'ً', 'ِ', 'ٍ', 'ُ', 'ٌ'];
 
      window.direction = 'l2r';
@@ -177,12 +178,15 @@
      };
 
      const fn_l2r = () => {
-       const raw = txt_input.value
-                            .replace(/h/g,'\'')
-                            .replace(/[\.| ]+i /g,' إ ')
-                            .replace(/ni'o/g,'ئ')
-                            .replace(/ +/g,' ')
-                            .replace(/\n|\r|\t/g,' <br/> ');
+       const raw = (' ' + txt_input.value + ' ')
+         .replace(/h/g,'\'')
+         .replace(/[\.| ]+i /g,' إ ')
+         .replace(/[\.| ]+i /g,' إ ')
+         .replace(/(\W)(ni'o)(\W)/g,'$1ئ$3')
+         .replace(/(\W)(ni'o)(\W)/g,'$1ئ$3')
+         .replace(/ +/g,' ')
+         .replace(/\n|\r|\t/g,' <br/> ')
+         .trim();
        let result = '';
        for (let word of raw.split(' ')) {
          if (word.includes('<br/>')) {
